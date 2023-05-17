@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 0px 0px 40px;
+
+  & &__line {
+    width: 40%;
+    height: 1px;
+    background-color: var(--clr-white);
+    opacity: 0.25;
+    transform: translateX(5%);
+  }
+}

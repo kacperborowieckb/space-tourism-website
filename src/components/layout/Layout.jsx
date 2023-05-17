@@ -1,10 +1,11 @@
+import Header from '../header/Header';
 import './layout.scss';
 import { Outlet } from 'react-router';
 
 const Layout = () => {
   return (
     <>
-      <div>layout</div>
+      <Header />
       <Outlet />
     </>
   );

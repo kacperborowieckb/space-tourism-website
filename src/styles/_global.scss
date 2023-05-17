@@ -7,3 +7,8 @@ body {
   line-height: var(--lh-body);
   color: var(--clr-white);
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
