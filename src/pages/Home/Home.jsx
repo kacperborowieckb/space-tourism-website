@@ -1,6 +1,9 @@
 import './home.scss';
+import { useNavigate } from 'react-router';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="home">
       <section className="home__content">
@@ -14,7 +17,9 @@ const Home = () => {
           </p>
         </article>
         <section className="home__button-container">
-          <button className="home__button">EXPLORE</button>
+          <button className="home__button" onClick={() => navigate('/destination')}>
+            EXPLORE
+          </button>
         </section>
       </section>
     </main>

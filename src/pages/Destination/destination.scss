@@ -1,3 +1,37 @@
 .destination {
   background-image: url('/destination/background-destination-desktop.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  & &__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  & &__sub-heading {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-body);
+    font-size: var(--fs-h5);
+    line-height: 34px;
+    text-transform: uppercase;
+    letter-spacing: var(--ls-h5);
+    text-align: center;
+  }
+
+  & &__number {
+    padding-right: 28px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    opacity: 0.25;
+    letter-spacing: var(--ls-h5);
+  }
+
+  & &__img {
+    margin-top: 100px;
+    width: 445px;
+    aspect-ratio: 1/1;
+  }
 }
