@@ -2,9 +2,9 @@
   background-image: url('/destination/background-destination-desktop.jpg');
   display: flex;
   justify-content: center;
-  align-items: flex-end;
 
   & &__content {
+    margin-top: 212px;
     display: flex;
     justify-content: space-around;
     width: 100%;
