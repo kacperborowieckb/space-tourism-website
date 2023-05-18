@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Nav = ({ openNav, setOpenNav }) => {
   return (
-    <nav className="nav" style={{ transform: openNav ? 'translateX(0%)' : '' }}>
+    <nav className="nav" style={{ transform: openNav ? 'translateX(-100%)' : '' }}>
       <button
         className="nav__close"
         onClick={() => {
