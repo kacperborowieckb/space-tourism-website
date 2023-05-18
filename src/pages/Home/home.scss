@@ -1,7 +1,68 @@
 .home {
   background-image: url('/home/background-home-desktop.jpg');
-  height: 100%;
-  background-size: cover;
-  height: 100%;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10%;
+  color: var(--clr-light);
+  font-family: var(--ff-secondary);
+
+  & &__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  & &__text-content {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 445px;
+  }
+
+  & &__sub-heading {
+    font-size: var(--fs-sb1);
+    font-weight: var(--fw-body);
+    line-height: 34px;
+    letter-spacing: var(--ls-h5);
+  }
+
+  & &__main-heading {
+    color: var(--clr-white);
+    font-size: var(--fs-h1);
+    line-height: 172px;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-body);
+  }
+
+  & &__desc {
+    line-height: var(--lh-body);
+    color: var(--clr-light);
+    font-weight: var(--fw-body);
+    letter-spacing: 1.1px;
+  }
+
+  & &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & &__button {
+    border: none;
+    background-color: var(--clr-white);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h4);
+    line-height: 37px;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 3rem;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+  }
+
+  & &__button:hover {
+    box-shadow: 0px 0px 0px 88px var(--clr-main-button-hover);
+  }
 }

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
+#root {
+  background-color: var(--clr-dark);
+}
+
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
@@ -11,4 +15,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+main {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

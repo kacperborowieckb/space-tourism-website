@@ -1,33 +1,39 @@
+import { useState } from 'react';
 import './nav.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
+  const [currentPage, setCurrentPage] = useState('/');
+
   return (
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__list-item">
-          <Link to={'/'}>
+          <NavLink to={'/'} className={({ isActive }) => (isActive ? 'nav__active' : '')}>
             <span className="nav__number">00</span>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className="nav__list-item">
-          <Link to={'/destination'}>
+          <NavLink
+            to={'/destination'}
+            className={({ isActive }) => (isActive ? 'nav__active' : '')}
+          >
             <span className="nav__number">01</span>
             Destination
-          </Link>
+          </NavLink>
         </li>
         <li className="nav__list-item">
-          <Link to={'/crew'}>
+          <NavLink to={'/crew'} className={({ isActive }) => (isActive ? 'nav__active' : '')}>
             <span className="nav__number">02</span>
             Crew
-          </Link>
+          </NavLink>
         </li>
         <li className="nav__list-item">
-          <Link to={'/technology'}>
+          <NavLink to={'/technology'} className={({ isActive }) => (isActive ? 'nav__active' : '')}>
             <span className="nav__number">03</span>
             Technology
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

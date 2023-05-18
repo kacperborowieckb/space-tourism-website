@@ -1,7 +1,7 @@
 import './technology.scss';
 
 const Technology = () => {
-  return <div>Technology</div>;
+  return <main className="technology">Technology</main>;
 };
 
 export default Technology;

@@ -3,16 +3,20 @@
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
+  font-family: var(--ff-secondary);
+  letter-spacing: var(--ls-nav-text);
 
   & &__list {
     display: flex;
     list-style: none;
     gap: 50px;
+    margin-right: 2rem;
   }
 
   & &__list-item {
     height: 96px;
   }
+
   & &__list-item > a {
     display: flex;
     align-items: center;
@@ -36,6 +40,10 @@
 
   & &__list-item > a:active:before {
     opacity: 1;
+  }
+
+  & &__list-item > &__active:before {
+    opacity: 1 !important;
   }
 
   & &__number {
