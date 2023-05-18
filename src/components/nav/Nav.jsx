@@ -1,12 +1,17 @@
-import { useState } from 'react';
 import './nav.scss';
 import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
-  const [currentPage, setCurrentPage] = useState('/');
-
+const Nav = ({ openNav, setOpenNav }) => {
   return (
-    <nav className="nav">
+    <nav className="nav" style={{ transform: openNav ? 'translateX(0%)' : '' }}>
+      <button
+        className="nav__close"
+        onClick={() => {
+          setOpenNav(false);
+        }}
+      >
+        <img src="/shared/icon-close.svg" alt="close nav icon" />
+      </button>
       <ul className="nav__list">
         <li className="nav__list-item">
           <NavLink to={'/'} className={({ isActive }) => (isActive ? 'nav__active' : '')}>

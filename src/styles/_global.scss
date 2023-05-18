@@ -22,4 +22,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 10%;
+
+  @media (max-width: 1000px) {
+    padding-bottom: 1rem;
+  }
 }

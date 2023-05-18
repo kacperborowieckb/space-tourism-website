@@ -65,11 +65,19 @@
     box-shadow: 0px 0px 0px 88px var(--clr-main-button-hover);
   }
 
-  // @media (max-width: 1200px) {
-  //   background-image: url('/home/background-home-tablet.jpg');
-  // }
+  @media (max-width: 1000px) {
+    background-image: url('/home/background-home-tablet.jpg');
+    text-align: center;
 
-  // @media (max-width: 768px) {
-  //   background-image: url('/home/background-home-mobile.jpg');
-  // }
+    & &__content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 85%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    background-image: url('/home/background-home-mobile.jpg');
+  }
 }
