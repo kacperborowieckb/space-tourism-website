@@ -79,8 +79,31 @@
   }
 
   @media (max-width: 768px) {
+    align-items: flex-start;
+
     & &__content {
       gap: 2rem;
+      margin-top: 100px;
+      padding: 0 1rem;
+    }
+
+    & &__sub-heading {
+      font-size: var(--fs-nav-text);
+      line-height: 19px;
+      letter-spacing: var(--ls-nav-text);
+    }
+
+    & &__main-heading {
+      font-size: 80px;
+      line-height: 100px;
+    }
+
+    & &__desc {
+      font-size: 15px;
+      line-height: 25px;
+      color: var(--clr-light);
+
+      letter-spacing: 1.1px;
     }
   }
 

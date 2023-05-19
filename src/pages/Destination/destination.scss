@@ -73,6 +73,16 @@
 
     & &__sub-heading {
       text-align: center;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: var(--ls-nav-text);
+      padding-left: 0px;
+    }
+
+    & &__number {
+      padding-right: 18px;
+
+      letter-spacing: var(--ls-nav-text);
     }
   }
 }

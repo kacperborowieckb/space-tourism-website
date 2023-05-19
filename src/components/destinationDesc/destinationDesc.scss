@@ -124,4 +124,24 @@
       justify-content: center;
     }
   }
+
+  @media (max-width: 500px) {
+    & &__heading {
+      font-size: var(--fs-h3);
+      line-height: 64px;
+    }
+
+    & &__description {
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 1.2px;
+      margin-bottom: 25px;
+      min-height: 128px;
+    }
+
+    & &__info-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
 }
