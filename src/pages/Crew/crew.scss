@@ -1,3 +1,93 @@
 .crew {
   background-image: url('/crew/background-crew-desktop.jpg');
+  display: flex;
+  justify-content: space-around;
+  padding: 212px 50px 0px 50px;
+
+  & &__desc {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 94px;
+  }
+
+  & &__heading {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-body);
+    letter-spacing: var(--ls-h5);
+    line-height: 34px;
+    text-transform: uppercase;
+    padding-bottom: 150px;
+  }
+
+  & &__number {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-h5);
+    line-height: 34px;
+  }
+
+  & &__role {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-body);
+    opacity: 0.5;
+    text-transform: uppercase;
+    line-height: 37px;
+    padding-bottom: 15px;
+  }
+
+  & &__name {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-body);
+    line-height: 64px;
+    text-transform: uppercase;
+    padding-bottom: 27px;
+  }
+
+  & &__bio {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-body);
+    color: var(--clr-light);
+    line-height: 32px;
+    letter-spacing: 1px;
+    flex-grow: 1;
+  }
+
+  & &__buttons {
+    display: flex;
+    gap: 24px;
+  }
+
+  & &__button {
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    border: none;
+    opacity: 0.17;
+    cursor: pointer;
+  }
+
+  & &__gallery {
+    display: flex;
+    width: 568px;
+  }
+
+  & &__image {
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  @media (max-width: 1000px) {
+    background-image: url('/crew/background-crew-tablet.jpg');
+  }
+
+  @media (max-width: 500px) {
+    background-image: url('/crew/background-crew-mobile.jpg');
+  }
 }

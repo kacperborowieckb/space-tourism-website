@@ -21,9 +21,5 @@ main {
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 10%;
-
-  @media (max-width: 1000px) {
-    padding-bottom: 1rem;
-  }
+  padding-bottom: 1rem;
 }
