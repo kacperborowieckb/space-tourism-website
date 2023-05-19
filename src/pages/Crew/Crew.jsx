@@ -16,7 +16,6 @@ const Crew = () => {
           <h3 className="crew__name">{crew[currentMember].name}</h3>
           <p className="crew__bio">{crew[currentMember].bio}</p>
         </section>
-
         <section className="crew__buttons">
           {Array(4)
             .fill(null)
