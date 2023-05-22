@@ -2,6 +2,7 @@ import { useState } from 'react';
 import DestinationDesc from '../../components/destinationDesc/DestinationDesc';
 import './destination.scss';
 import { destinations } from '../../data/data.json';
+import { motion } from 'framer-motion';
 
 const Destination = () => {
   const [currentDestination, setCurrentDestination] = useState(0);
@@ -12,7 +13,10 @@ const Destination = () => {
           <h5 className="destination__sub-heading">
             <span className="destination__number">01</span>Pick your destination
           </h5>
-          <img
+          <motion.img
+            key={currentDestination}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             src={`/destination/image-${destinations[currentDestination].name.toLowerCase()}.png`}
             alt="destination image"
             className="destination__img"

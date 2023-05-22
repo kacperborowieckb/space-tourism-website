@@ -1,4 +1,5 @@
 import './destinationDesc.scss';
+import { motion } from 'framer-motion';
 
 const DestinationNav = ({ currentDestination, setCurrentDestination, destinations }) => {
   return (
@@ -19,7 +20,12 @@ const DestinationNav = ({ currentDestination, setCurrentDestination, destination
           ))}
         </ul>
       </nav>
-      <section className="destination-desc__content">
+      <motion.section
+        key={currentDestination}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="destination-desc__content"
+      >
         <h2 className="destination-desc__heading">{destinations[currentDestination].name}</h2>
         <p className="destination-desc__description">
           {destinations[currentDestination].description}
@@ -35,7 +41,7 @@ const DestinationNav = ({ currentDestination, setCurrentDestination, destination
             <h5 className="destination-desc__value">{destinations[currentDestination].travel}</h5>
           </section>
         </section>
-      </section>
+      </motion.section>
     </article>
   );
 };

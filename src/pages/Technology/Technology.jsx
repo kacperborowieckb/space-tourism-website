@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './technology.scss';
 import { technology } from '../../data/data.json';
+import { motion } from 'framer-motion';
 
 const Technology = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -44,12 +45,19 @@ const Technology = () => {
           </section>
           <section className="technology__text-content">
             <h6 className="technology__sub-header">THE TERMINOLOGY…</h6>
-            <h3 className="technology__name">{technology[currentImage].name}</h3>
-            <p className="technology__desc">{technology[currentImage].description}</p>
+            <motion.section key={currentImage} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <h3 className="technology__name">{technology[currentImage].name}</h3>
+              <p className="technology__desc">{technology[currentImage].description}</p>
+            </motion.section>
           </section>
         </section>
       </section>
-      <section className="technology__gallery">
+      <motion.section
+        className="technology__gallery"
+        key={currentImage}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <img
           src={`/technology/image-${technology[currentImage].name
             .toLowerCase()
@@ -58,7 +66,7 @@ const Technology = () => {
           alt="rocket image"
           className="technology__image"
         />
-      </section>
+      </motion.section>
     </main>
   );
 };

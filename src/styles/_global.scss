@@ -10,6 +10,7 @@ body {
   font-weight: var(--fw-body);
   line-height: var(--lh-body);
   color: var(--clr-white);
+  background-color: var(--clr-dark);
 }
 
 a {
@@ -22,4 +23,14 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 1rem;
+  animation: fade-in 0.75s ease;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
